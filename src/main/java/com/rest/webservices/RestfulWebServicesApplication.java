@@ -11,16 +11,11 @@ import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 
 @SpringBootApplication
-public class RestfulWebServicesApplication extends SpringBootServletInitializer {
+public class RestfulWebServicesApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RestfulWebServicesApplication.class, args);
 	}
-	
-	@Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(RestfulWebServicesApplication.class);
-    }
 	
 	@Bean
 	public LocaleResolver localeResolver() {
