@@ -7,7 +7,7 @@ phases:
         java: openjdk8
   pre_build:
     commands:
-    - echo "Entered build phase"
+    - echo "Entered pre build phase"
   build:
     commands:
     - echo "Entered build phase"
