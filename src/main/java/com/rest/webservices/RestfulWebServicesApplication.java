@@ -17,12 +17,12 @@ public class RestfulWebServicesApplication extends SpringBootServletInitializer 
 	public static void main(String[] args) {
 		SpringApplication.run(RestfulWebServicesApplication.class, args);
 	}
-	
-	
-	  @Override protected SpringApplicationBuilder
-	  configure(SpringApplicationBuilder builder) { return
-	  builder.sources(RestfulWebServicesApplication.class); }
-	 
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+		return builder.sources(RestfulWebServicesApplication.class);
+	}
+
 	@Bean
 	public LocaleResolver localeResolver() {
 		AcceptHeaderLocaleResolver localeResolver = new AcceptHeaderLocaleResolver();
