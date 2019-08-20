@@ -1,0 +1,11 @@
+1) Goto AWS Beanstalk and create application and then create Environment.
+    i) in the above step, choose the preconfigured platform as tomcat.
+    ii) For application Code, choose to upload the code for now.
+    iii) Generate the war using thte steps provided in mkyongs blog.
+    iv) Upload the war generated as application and click on create application.
+    
+    
+ 2) Create Pipeline:
+    i) Give a name to pipeline and connect to the Github Source.
+    ii) Create buildspec.yml(Build configuration file for AWS Code Build Service) and push it to the github.
+    iii) 
