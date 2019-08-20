@@ -1,21 +1,24 @@
-# This file controls the AWS CodeBuild
-
 version: 0.2
 phases:
   install:
-      runtime-versions:
-        java: openjdk8
+     runtime-versions:
+       java: openjdk8
   pre_build:
     commands:
-    - echo "Entered pre build phase"
+    - echo "Entered the pre-build phase"
   build:
     commands:
     - echo "Entered build phase"
-    - mvn clean package
+    - mvn compile
   post_build:
     commands:
     - echo "Entered the post-build phase"
-    - mv target/deploy ./
+    - mvn package
+    - mkdir artifact
+    - unzip target/aws-elastic-beanstalk-example-2-0.0.1-SNAPSHOT.war -d artifact/
 artifacts:
   files:
-    - deploy/**/*
+    - artifact/**/*
+cache:
+  paths:
+    - '/root/.m2/**/*'
