@@ -8,4 +8,4 @@
  2) Create Pipeline:
     i) Give a name to pipeline and connect to the Github Source.
     ii) Create buildspec.yml(Build configuration file for AWS Code Build Service) and push it to the github.
-    iii) 
+    iii) Configure Github Repo URl, buidspec file name for code deploy service(buildspec.yml) and deployment service as code deploy using the aws beanstalk application environment deteila that you created earlier.
